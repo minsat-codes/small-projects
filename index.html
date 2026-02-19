@@ -1,22 +1,45 @@
 <!DOCTYPE html>
-<html lang=”en”>
+<html lang="en">
 <head>
-    <meta charset=”UTF-8”>
-    <meta name=”viewport” content=”width=device-width, initial
-scale=1.0”>
-    <title>Profile Card</title>
+    <meta charset="UTF-8">
+    <title>Fawzia | Cyberpunk</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class=”profile-card”>
-        <img src="image.jpg" alt=”Profile Picture” width=”150”>
-        <h1>Fawzia Tasnim</h1>
-        <p>Hello! I’m Fawzi! and I’m passionate about web 
-design. I love coding and creating visually stunning designs.</p>
-        <ul>
-            <li>Coding</li>
-            <li>Photography</li>
-            <li>Reading</li>
-        </ul>
+
+    <!-- Matrix Canvas Background -->
+    <canvas id="matrix"></canvas>
+
+    <!-- Moving Particles -->
+    <div class="particles"></div>
+
+    <!-- Glass Cyberpunk Card -->
+    <div class="profile-card">
+
+        <img src="image.jpg" alt="Profile">
+
+        <h1 class="typing"></h1>
+
+        <p>Web Dev | Gamer | Cyber Queen ⚡</p>
+
+        <div class="links">
+            <a href="#">🎮 Gaming</a>
+            <a href="#">💻 GitHub</a>
+            <a href="#">📸 Instagram</a>
+            <a href="#">🌐 Portfolio</a>
+        </div>
+
     </div>
+
+    <!-- Optional Background Music -->
+    <!-- Replace music.mp3 with your own file -->
+    <audio autoplay loop>
+        <source src="music.mp3" type="audio/mp3">
+    </audio>
+
+    <script src="script.js"></script>
 </body>
 </html>
