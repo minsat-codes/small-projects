@@ -13,18 +13,31 @@
     <!-- Matrix Canvas Background -->
     <canvas id="matrix"></canvas>
 
-    <!-- Moving Particles -->
-    <div class="particles"></div>
+    <!-- Floating Stickers Behind Card -->
+    <div class="stickers">
+        <span>💻</span>
+        <span>🎮</span>
+        <span>⚡</span>
+        <span>👾</span>
+        <span>🕹️</span>
+    </div>
 
     <!-- Glass Cyberpunk Card -->
     <div class="profile-card">
 
-        <img src="image.jpg" alt="Profile">
+        <!-- Profile Image -->
+        <div class="img-container">
+            <img src="image.jpg" alt="Profile">
+            <div class="neon-halo"></div>
+        </div>
 
+        <!-- Typing Effect Name -->
         <h1 class="typing"></h1>
 
+        <!-- Bio -->
         <p>Web Dev | Gamer | Cyber Queen ⚡</p>
 
+        <!-- Clickable Links -->
         <div class="links">
             <a href="#">🎮 Gaming</a>
             <a href="#">💻 GitHub</a>
@@ -34,12 +47,12 @@
 
     </div>
 
-    <!-- Optional Background Music -->
-    <!-- Replace music.mp3 with your own file -->
+    <!-- Background Music (optional) -->
     <audio autoplay loop>
         <source src="music.mp3" type="audio/mp3">
     </audio>
 
+    <!-- JS -->
     <script src="script.js"></script>
 </body>
 </html>
