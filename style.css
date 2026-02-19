@@ -12,23 +12,28 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: -2;
+    z-index: -3;
 }
 
-/* ===== PARTICLES ===== */
-.particles {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background-image: radial-gradient(#ff00ff 1px, transparent 1px);
-    background-size: 40px 40px;
-    animation: moveParticles 10s linear infinite;
-    z-index: -1;
+/* ===== FLOATING STICKERS ===== */
+.stickers span {
+    position: absolute;
+    font-size: 40px;
+    animation: float 10s linear infinite;
+    opacity: 0.5;
 }
 
-@keyframes moveParticles {
-    from { background-position: 0 0; }
-    to { background-position: 0 100px; }
+/* Random start positions */
+.stickers span:nth-child(1) { left: 5%; top: 10%; animation-delay: 0s; }
+.stickers span:nth-child(2) { left: 80%; top: 20%; animation-delay: 2s; }
+.stickers span:nth-child(3) { left: 50%; top: 5%; animation-delay: 4s; }
+.stickers span:nth-child(4) { left: 20%; top: 30%; animation-delay: 6s; }
+.stickers span:nth-child(5) { left: 70%; top: 50%; animation-delay: 8s; }
+
+@keyframes float {
+    0% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(200px) rotate(180deg); }
+    100% { transform: translateY(-200px) rotate(360deg); }
 }
 
 /* ===== GLASSMORPHISM CARD ===== */
@@ -38,57 +43,79 @@ body {
     padding: 40px;
     text-align: center;
     border-radius: 20px;
-
-    /* Glass effect */
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(15px);
-
     margin: auto;
     top: 50%;
     transform: translateY(-50%);
-
-    /* RGB Animated Border */
     border: 3px solid transparent;
-    border-image: linear-gradient(45deg, red, blue, lime, magenta) 1;
+    border-image: linear-gradient(45deg, red, blue, magenta, pink) 1;
     animation: rgbBorder 3s linear infinite;
+    z-index: 1; /* Above stickers */
 }
 
-/* RGB Animation */
+/* RGB Border Animation */
 @keyframes rgbBorder {
     0% { border-image-source: linear-gradient(45deg, red, blue); }
-    50% { border-image-source: linear-gradient(45deg, lime, magenta); }
+    50% { border-image-source: linear-gradient(45deg, magenta, pink); }
     100% { border-image-source: linear-gradient(45deg, red, blue); }
 }
 
-/* IMAGE */
+/* ===== PROFILE IMAGE & NEON HALO ===== */
+.img-container {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
 .profile-card img {
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    margin-bottom: 15px;
+    z-index: 2;
+    position: relative;
 }
 
-/* TYPING TEXT */
+/* Neon Halo */
+.neon-halo {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 2px solid #ff69b4;
+    box-shadow: 0 0 20px #ff69b4, 0 0 40px #ff69b4;
+    animation: haloPulse 2s infinite alternate;
+    z-index: 1;
+}
+
+@keyframes haloPulse {
+    from { box-shadow: 0 0 15px #ff69b4, 0 0 30px #ff69b4; }
+    to { box-shadow: 0 0 25px #ff69b4, 0 0 50px #ff69b4; }
+}
+
+/* ===== TYPING EFFECT ===== */
 .typing {
-    color: #ff00ff;
+    color: #ff69b4; /* neon pink */
     font-size: 22px;
     height: 30px;
 }
 
-/* LINKS */
+/* ===== LINKS ===== */
 .links a {
     display: block;
     text-decoration: none;
     margin: 10px 0;
     padding: 10px;
     border-radius: 10px;
-    color: #00ffff;
-    border: 1px solid #00ffff;
+    color: #ff69b4;
+    border: 1px solid #ff69b4;
     transition: 0.3s;
 }
 
 .links a:hover {
-    background: #00ffff;
+    background: #ff69b4;
     color: black;
-    box-shadow: 0 0 20px #00ffff;
+    box-shadow: 0 0 20px #ff69b4;
 }
