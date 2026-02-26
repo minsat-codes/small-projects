@@ -24,6 +24,7 @@ body {
     opacity: 0.5;
 }
 
+
 /* Random start positions */
 .stickers span:nth-child(1) { left: 5%; top: 10%; animation-delay: 0s; }
 .stickers span:nth-child(2) { left: 80%; top: 20%; animation-delay: 2s; }
