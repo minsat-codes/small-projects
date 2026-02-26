@@ -1,4 +1,5 @@
 // ===== MATRIX RAIN EFFECT (Pink/Purple Neon) =====
+
 const canvas = document.getElementById("matrix");
 const ctx = canvas.getContext("2d");
 
