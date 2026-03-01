@@ -1,59 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
-    <meta charset="UTF-8">
-    <title>Fawzia | Cyberpunk</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Link CSS -->
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>TechSphere | Latest Tech</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Matrix Canvas Background -->
-    <canvas id="matrix"></canvas>
+<div id="particles-js"></div>
 
-    <!-- Floating Stickers Behind Card -->
-    <div class="stickers">
-        <span>💻</span>
-        <span>🎮</span>
-        <span>⚡</span>
-        <span>👾</span>
-        <span>🕹️</span>
+<nav class="navbar">
+    <h1 class="logo">TechSphere 🔥</h1>
+    <div class="theme-toggle">
+        <button id="themeBtn">🌙</button>
+    </div>
+    <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Conferences</a></li>
+        <li><a href="#">Releases</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
+
+<main class="main-wrap">
+
+    <h2>Latest Tech Highlights</h2>
+
+    <div class="filters">
+        <button data-category="All" class="active">All</button>
+        <button data-category="Conferences">Conferences</button>
+        <button data-category="Gadgets">Gadgets</button>
+        <button data-category="AI">AI</button>
     </div>
 
-    <!-- Glass Cyberpunk Card -->
-    <div class="profile-card">
+    <div id="cardsGrid" class="cards-grid"></div>
+</main>
 
-        <!-- Profile Image -->
-        <div class="img-container">
-            <img src="image.jpg" alt="Profile">
-            <div class="neon-halo"></div>
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2 id="modalTitle"></h2>
+        <img id="modalImage" src="" alt="" />
+        <p id="modalContent"></p>
+        <div id="commentsSection">
+            <h3>Comments</h3>
+            <div id="commentsList"></div>
+            <input type="text" id="commentInput" placeholder="Add a comment">
+            <button id="addCommentBtn">Post</button>
         </div>
-
-        <!-- Typing Effect Name -->
-        <h1 class="typing"></h1>
-
-        <!-- Bio -->
-        <p>Web Dev | Gamer | Cyber Queen ⚡</p>
-
-        <!-- Clickable Links -->
-        <div class="links">
-            <a href="#">🎮 Gaming</a>
-            <a href="#">💻 GitHub</a>
-            <a href="#">📸 Instagram</a>
-            <a href="#">🌐 Portfolio</a>
-        </div>
-
     </div>
+</div>
 
-    <!-- Background Music (optional) -->
-    <audio autoplay loop>
-        <source src="music.mp3" type="audio/mp3">
-    </audio>
-
-    <!-- JS -->
-    <script src="script.js"></script>
+<script src="particles.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
